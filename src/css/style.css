@@ -8,3 +8,11 @@ nav {
     width: 100%;
     z-index: 1000;
 }
+
+.foto_perfil {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    padding: 1.5px;
+    border: 2px solid black;
+}
