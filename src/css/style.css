@@ -1,35 +1,9 @@
-nav {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 5px;
-    border-bottom: 2px solid #686666;
-    width: 100%;
-    z-index: 1000;
-}
-
-.foto_perfil {
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    padding: 1.5px;
-    border: 2px solid black;
-}
-
-.Container_principal {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-}
-
 /* Grid de cards */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px 30px;
+  margin-top: 10%;
 }
 
 /* Card individual */
@@ -42,18 +16,21 @@ nav {
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  width: 250px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .profile-card:hover {
   transform: translateY(-5px);
 }
 
-/* Avatar com círculo */
 .avatar-wrapper {
   position: relative;
   width: 80px;
   height: 80px;
-  margin: -50px auto 20px;
+  margin: -80px auto 20px;
 }
 
 .avatar-circle {
@@ -75,7 +52,6 @@ nav {
   object-fit: cover;
 }
 
-/* Conteúdo do card */
 .card-content {
   margin-top: 15px;
 }
@@ -114,10 +90,6 @@ nav {
 
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
   border-bottom: 2px solid #333;
   padding-bottom: 20px;
 }
@@ -129,6 +101,9 @@ nav {
 }
 
 .search-box {
+  flex-grow: 1;
+  max-width: 500px; 
+  margin: 0 30px;
   width: 300px;
   padding: 10px 15px;
   border: 2px solid #333;
@@ -142,4 +117,44 @@ nav {
   border-radius: 50%;
   background: linear-gradient(135deg, #FF69B4 0%, #FFD700 100%);
   padding: 2px;
+}
+.container_principal {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header nav {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 15px 20px; 
+}
+
+.user_login {
+    background-color: #0099FF;
+    color: white; 
+    font-weight: 700; 
+    font-size: 14px; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    
+    box-shadow: 0 4px 6px rgba(0, 153, 255, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+}
+
+.user_login:hover {
+    background-color: #0077CC; 
+    box-shadow: 0 6px 10px rgba(0, 153, 255, 0.4); 
+    transform: translateY(-2px); 
+}
+
+.user_login:active {
+    transform: translateY(0); 
+    box-shadow: 0 2px 4px rgba(0, 153, 255, 0.2); 
 }
