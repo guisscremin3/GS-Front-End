@@ -7,26 +7,74 @@
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div>SkillSphere</div>
-            <div>
-                <input type="search" placeholder="Buscar profissionais, skills ou áreas">
-                <button type="submit">&#128269;</button>
-            </div>
-            <div>
-                <button>Fazer Login</button>
-            </div>
+    
+    <header class="header">
+        <nav class="navbar">
+            <div class="skillsphere-logo">SKILLSPHERE</div>
+            <input type="search" placeholder="Buscar profissionais, skills ou áreas" class="search-box">
+            <button type="submit" class="btn-submit">#1282699</button>
         </nav>
+        <div class="user-login">
+            <button>Fazer Login</button>
+        </div>
     </header>
-    <section>
-        <div> 
-            <img src="src/assets/images/Perfil_1.jpg" alt="foto_de_perfil" class="foto_perfil">
-            <div>Bruno</div>
-            <div>Engenheiro de Software Sênior</div>
-            <div>QuantaVerse Innovations</div>
-            <div>Python, Machine Learning (ML), Cloud Computing (AWS/Azure), Desenvolvimento Ágil (Scrum)</div>
-            <div>(MIT), Cambridge, EUA</div>
+
+    <!-- SEÇÃO PRINCIPAL -->
+    <section class="skillsphere-container">
+        <!-- GRID DE CARDS -->
+        <div class="cards-grid">
+            <!-- CARD 1 -->
+            <div class="profile-card">
+                <div class="avatar-wrapper">
+                    <div class="avatar-circle">
+                        <img src="src/assets/images/Perfil_1.jpg" alt="foto de perfil" class="avatar-image">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>NOME</h3>
+                    <p class="company">Empresa</p>
+                    <p class="area">Engenheiro de Software Sênior</p>
+                    <p class="skills">Python, Machine Learning (ML), Cloud Computing (AWS/Azure), Desenvolvimento Ágil (Scrum)</p>
+                    <p class="formation">MIT, Cambridge, EUA</p>
+                    <button class="message-button">envie uma mensagem</button>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="profile-card">
+                <div class="avatar-wrapper">
+                    <div class="avatar-circle">
+                        <img src="src/assets/images/Perfil_2.jpg" alt="foto de perfil" class="avatar-image">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>NOME</h3>
+                    <p class="company">Empresa</p>
+                    <p class="area">Quantverse Innovations</p>
+                    <p class="skills">Python, Machine Learning (ML), Cloud Computing (AWS/Azure), Desenvolvimento Ágil (Scrum)</p>
+                    <p class="formation">MIT, Cambridge, EUA</p>
+                    <button class="message-button">envie uma mensagem</button>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="profile-card">
+                <div class="avatar-wrapper">
+                    <div class="avatar-circle">
+                        <img src="src/assets/images/Perfil_3.jpg" alt="foto de perfil" class="avatar-image">
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>NOME</h3>
+                    <p class="company">Empresa</p>
+                    <p class="area">Área de atuação</p>
+                    <p class="skills">Python, Machine Learning (ML), Cloud Computing (AWS/Azure), Desenvolvimento Ágil (Scrum)</p>
+                    <p class="formation">MIT, Cambridge, EUA</p>
+                    <button class="message-button">envie uma mensagem</button>
+                </div>
+            </div>
+
+            <!-- Repita para mais cards conforme necessário -->
         </div>
     </section>
 </body>
