@@ -11,7 +11,7 @@
     <header class="header">
         <nav>
             <div class="logo">SKILLSPHERE</div>
-            <input type="search" placeholder="Buscar profissionais, skills ou áreas" class="search-box">
+            <input type="search" placeholder="Buscar profissionais, skills ou áreas" id="search-input" class="search-box">
             <div class="user-login">
             <button class="user_login">Fazer Login</button>
             </div>
@@ -21,60 +21,10 @@
     <!-- SEÇÃO PRINCIPAL -->
     <section class="container_principal">
         <!-- GRID DE CARDS -->
-        <div class="cards-grid">
-            <!-- CARD 1 -->
-            <div class="profile-card">
-                <div class="avatar-wrapper">
-                    <div class="avatar-circle">
-                        <img src="src/assets/images/Perfil_1.jpg" alt="foto de perfil" class="avatar-image">
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h3>NOME</h3>
-                    <p>Empresa</p>
-                    <p>Engenheiro de Software Sênior</p>
-                    <p>Python, Machine Learning (ML), Cloud Computing (AWS/Azure), Desenvolvimento Ágil (Scrum)</p>
-                    <p>MIT, Cambridge, EUA</p>
-                    <button class="message-button">envie uma mensagem</button>
-                </div>
-            </div>
+        <div id = "cards-container" class="cards-grid">
 
-            <!-- CARD 2 -->
-            <div class="profile-card">
-                <div class="avatar-wrapper">
-                    <div class="avatar-circle">
-                        <img src="src/assets/images/Perfil_2.jpg" alt="foto de perfil" class="avatar-image">
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h3>NOME</h3>
-                    <p class="company">Empresa</p>
-                    <p class="area">Quantverse Innovations</p>
-                    <p class="skills">Python, Machine Learning (ML), Cloud Computing (AWS/Azure), Desenvolvimento Ágil (Scrum)</p>
-                    <p class="formation">MIT, Cambridge, EUA</p>
-                    <button class="message-button">envie uma mensagem</button>
-                </div>
-            </div>
-
-            <!-- CARD 3 -->
-            <div class="profile-card">
-                <div class="avatar-wrapper">
-                    <div class="avatar-circle">
-                        <img src="src/assets/images/Perfil_3.jpg" alt="foto de perfil" class="avatar-image">
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h3>NOME</h3>
-                    <p class="company">Empresa</p>
-                    <p class="area">Área de atuação</p>
-                    <p class="skills">Python, Machine Learning (ML), Cloud Computing (AWS/Azure), Desenvolvimento Ágil (Scrum)</p>
-                    <p class="formation">MIT, Cambridge, EUA</p>
-                    <button class="message-button">envie uma mensagem</button>
-                </div>
-            </div>
-
-            <!-- Repita para mais cards conforme necessário -->
         </div>
     </section>
+    <script src="src/js/script.js"></script>
 </body>
 </html>
