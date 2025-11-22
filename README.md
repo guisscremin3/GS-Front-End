@@ -1,5 +1,11 @@
 🌐 SkillSphere: Conectando Talentos e Conhecimento!✨ 
 
+Trabalho ralizado por:
+
+Guilherme de Oliveira Scremin - RM 564788
+Igor Gadote -  RM 567747
+Gabriel Caramico - RM 568409
+
 Visão Geral do ProjetoO SkillSphere é uma aplicação web simples, desenvolvida para simular uma plataforma de busca e conexão de profissionais com base em suas skills (habilidades) e áreas de atuação. O projeto também inclui um Quiz interativo para engajar o usuário com temas relevantes do "Futuro do Trabalho" e uma funcionalidade de login básico.
 
 🚀 Funcionalidades Principais
