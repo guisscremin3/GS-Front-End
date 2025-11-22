@@ -238,61 +238,57 @@ function showResults() {
     `;
 }
 
-const loginButton = document.getElementById('login-button'); // O botão "Fazer Login" na header
+const loginButton = document.getElementById('login-button');
 const loginModal = document.getElementById('login-modal');
 const closeButton = document.querySelector('.close-button');
 const loginForm = document.getElementById('login-form');
 const loginMessage = document.getElementById('login-message');
 
-// Credenciais fixas
+
 const USER_CORRETO = 'adm';
 const SENHA_CORRETA = '12345';
 
-// 1. Abrir Modal ao clicar no botão "Fazer Login"
+
 if (loginButton) {
     loginButton.addEventListener('click', () => {
         loginModal.style.display = 'block';
-        loginForm.reset(); // Limpa o formulário
-        loginMessage.textContent = ''; // Limpa a mensagem de erro
+        loginForm.reset();
+        loginMessage.textContent = ''; 
     });
 }
 
-// 2. Fechar Modal ao clicar no 'x'
+
 if (closeButton) {
     closeButton.addEventListener('click', () => {
         loginModal.style.display = 'none';
     });
 }
 
-// 3. Fechar Modal ao clicar fora dele
+
 window.addEventListener('click', (event) => {
     if (event.target === loginModal) {
         loginModal.style.display = 'none';
     }
 });
 
-// 4. Lógica de Validação do Formulário
+
 if (loginForm) {
     loginForm.addEventListener('submit', (e) => {
-        e.preventDefault(); // Impede o envio padrão do formulário
+        e.preventDefault(); 
 
         const usernameInput = document.getElementById('username').value.trim();
         const passwordInput = document.getElementById('password').value.trim();
 
-        // Validação das credenciais
         if (usernameInput === USER_CORRETO && passwordInput === SENHA_CORRETA) {
             
-            // Sucesso no Login
             alert(`Bem-vindo, ${usernameInput}! Login realizado com sucesso.`);
             loginModal.style.display = 'none'; // Fecha o modal
             
-            // Opcional: Você pode mudar o texto do botão "Fazer Login" para "Olá, adm"
             loginButton.textContent = 'Olá, adm'; 
-            loginButton.classList.add('logged-in'); // Adiciona uma classe para estilização se desejar
-            loginButton.disabled = true; // Desabilita o botão (ou você pode mudar a funcionalidade)
+            loginButton.classList.add('logged-in');
+            loginButton.disabled = true; 
 
         } else {
-            // Falha no Login
             loginMessage.textContent = 'Usuário ou senha incorretos.';
         }
     });
