@@ -150,3 +150,90 @@ function filtrarProfissionais() {
 document.addEventListener('DOMContentLoaded', () => {
     renderizarCards(profissionais);
 });
+
+
+const quizData = [
+    {
+        question: "Qual tecnologia é essencial para a criação de sistemas de recomendação em redes profissionais?",
+        options: ["Blockchain", "Machine Learning", "Computação Quântica", "Realidade Virtual"],
+        answer: "Machine Learning"
+    },
+    {
+        question: "Qual termo se refere à prática de integrar fatores ambientais, sociais e de governança na estratégia corporativa?",
+        options: ["Scrum", "DevOps", "UX", "ESG"],
+        answer: "ESG"
+    },
+    {
+        question: "Em metodologias ágeis, quem é o responsável por garantir que o time siga as práticas do Scrum?",
+        options: ["Product Owner", "Stakeholder", "Scrum Master", "UX Designer"],
+        answer: "Scrum Master"
+    },
+    {
+        question: "Qual das Soft Skills é mais valorizada para o trabalho remoto e resolução de novos problemas?",
+        options: ["Datilografia", "Resiliência", "Foco em Hardware", "Conhecimento em COBOL"],
+        answer: "Resiliência"
+    }
+];
+
+let currentQuestionIndex = 0;
+let score = 0;
+const quizBox = document.getElementById('quiz-box');
+const resultsBox = document.getElementById('quiz-results');
+const startButton = document.getElementById('start-quiz-button');
+
+if (startButton) {
+    startButton.addEventListener('click', startQuiz);
+}
+
+function startQuiz() {
+    startButton.style.display = 'none';
+    currentQuestionIndex = 0;
+    score = 0;
+    resultsBox.style.display = 'none';
+    displayQuestion();
+}
+
+function displayQuestion() {
+    if (currentQuestionIndex >= quizData.length) {
+        showResults();
+        return;
+    }
+
+    const currentQuiz = quizData[currentQuestionIndex];
+    
+    quizBox.innerHTML = `
+        <div class="quiz-question">
+            <p><strong>Questão ${currentQuestionIndex + 1} de ${quizData.length}:</strong> ${currentQuiz.question}</p>
+        </div>
+        <div class="quiz-options">
+            ${currentQuiz.options.map(option => `
+                <button class="quiz-option-btn" onclick="checkAnswer('${option}')">${option}</button>
+            `).join('')}
+        </div>
+    `;
+}
+
+function checkAnswer(selectedOption) {
+    const currentQuiz = quizData[currentQuestionIndex];
+    
+    if (selectedOption === currentQuiz.answer) {
+        score++;
+        alert("Correto!");
+    } else {
+        alert(`Errado. A resposta correta era: ${currentQuiz.answer}`);
+    }
+
+    currentQuestionIndex++;
+    displayQuestion();
+}
+
+function showResults() {
+    quizBox.innerHTML = '';
+    resultsBox.style.display = 'block';
+
+    resultsBox.innerHTML = `
+        <h3>Fim do Quiz!</h3>
+        <p>Você acertou ${score} de ${quizData.length} perguntas.</p>
+        <button onclick="startQuiz()">Tentar Novamente</button>
+    `;
+}
